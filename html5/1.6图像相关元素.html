@@ -3,8 +3,39 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>图像相关标签</title>
+		
+		<!--
+			src :该属性指定图片文件 所在的位置 ，该属性值既可以是相对路径，也可以是绝对路径
+			alt：该属性指定一段文本，该文本作为图片的提示信息。
+			src还可以指定height ，width 值，这个值可以是百分比，也可以是像素值
+			
+			与图片相关的还有如下标签
+			<map>用于定义图片的映射，该元素主要 可以包含一个或多个<area> 子元素，每个<area>元素
+			可以定义一个区域，不同的区域可链接到不同的url</map>
+			<area>用于定义图片映射内部区域，该元素只能是一个空元素，该元素可以可以指定id
+				，style，class等核心属性外，也可以指定onclick事件，还可以指定onfocus，onblur等焦点
+				属性，
+				area还可以指定以下几个属性
+				shape：指定内部区域是哪种区域，该属性的默认值是“rect”，即矩形区域，除此
+				           之外还可以 是circle和ploy，分别代表圆形 区域和多边形区域
+				 coords：指定多个坐标值，用于确定区域位置
+				 href：用于确定区域所链接的资源
+				 alt：该属性指定一段文本，该文本将作为该图片的提示信息
+				 target：指定使用框架集中的哪个 框架来加载另一个资源。该属性值可以_self,_blank,_top,_parent
+				 四个值，分别代表使用自身，新窗口，顶层框架，父框架来加载资源
+				 media：指定 目标url所引用 的媒体 类型，默认值为all，只有当指定了href属性时该属性才有效
+				<area>
+		-->
 	</head>
 	<body>
-    <img src="/Users/jigaofei/Desktop/H5学习 /html5/1.jpg" width="300" height="200"/>
+	<img src ="image/67.jpg" alt="这是一个美女" /> <br />
+	<!--定义图片指定宽高-->
+	<img src ="image/67.jpg" width="300",height="200" 
+		alt="这是一个美女" />
+		<!--定义图片，使用指定的图片映射-->
+		<img src="image/67.jpg" width="300",hheight="120" border="0"
+			usemap="#test" />
+	
+    
 	</body>
 </html>
