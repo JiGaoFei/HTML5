@@ -2,8 +2,113 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title></title>
+		<title>表格相关元素</title>
+		<!--
+			<table>用于定义表格，
+				只能包含0个或1个<caption>子元素（定义表格标题）</caption>
+				只能包含0个或1个<thead>子元素（定义表格头）</thead>
+				只能包含0个或1个<tfoot>子元素，（定义表格脚）</tfoot>
+				可以包含多个<tr>子元素（定义表格行）</tr>
+				可以包含多个<tbody>子元素（定义表格体）</tbody>
+				
+				该元素可以指定 id，style，和class等普通属性，也可以指定 onclick等事件属性，除此之外 
+				该元素还有以下 几个属性
+				cellpading：指定单元格 内容 和单元格边框 之间的间距，该属性既可以是像素 值
+				             也可以是百分比 
+				             
+				 cellspacing：指定单元格 之间的间距，该属性值 既可是像素值，也可以 是百分比。
+				 width；指定表格的宽度，该属性值既 可以是像素值
+				</table>
+		-->
+		
+		<!--提示：HTML5删除了<table>子元素有 align,bgcolor,border等属性</table>，
+			如果完全 按HTML5的建议，<table>元素的cellpadding，cellspacing，width
+			</table>属性也不应该指定，而是应该全部放到CSS中定义。
+			
+		-->
+		
+		<!--
+			<caption>用于定义表格标题，该元素只能 包含文本，图片，超链接，文本格式
+			化元素和表单控件元素</caption>
+			<tr>定义表格行，该元素只能 包含<td>或<th>两种元素，该元素可以指定id，style，
+			class等核心属性，还可以指定onclick事件</tr>
+			<td>定义单元格，该元素和div一样，可以 饮食各种类型的子元素，包括在<td>元素
+			里饮食table子元素再次插入一个表格</td>  该元素可以指定id，style，
+			class等核心属性，还可以指定onclick事件，除此之外 还可以指定 如下几个属性
+			
+			colspan：指定该单元格 跨多少列，该属性值 就是一个简单数字
+			rowspan：指定此单元格 可横跨的行数
+			height：指定单元格的高度，既可以 是像素也可以 是百分比
+			width：指定单元格的宽度，既可以 是像素也可以 是百分比
+			
+			</td>
+			<th>定义表格页眉的单元格，和td标签 的用法 几乎完全 一样，只是浏览器
+			呈现时有差别</th>
+			<thboy>定义表格的主体</thboy>
+			<thead>定义表格头</thead>
+			<tfoot>定义表格脚</tfoot>
+		-->
 	</head>
 	<body>
+		<table style = "width:400px" border="1">
+			<caption><b>疯狂朋涛体系图书</b></caption>
+			<tr>
+				<th>书名</th>
+				<th>作者</th>
+			</tr>
+			<tr>
+				<td>人体艺术学</td>
+				<td>刘朋涛院士</td>
+			</tr>
+			<tr>
+				<td>两性艺术</td>
+				<td>刘朋涛</td>
+			</tr>
+			
+		</table>
+		<table style="width: 240px" border="2">
+			<tr>
+				<td rowspan="2">跨两行的单元格</td>
+				<td>普通单元格</td>
+			</tr>
+			<tr>
+				<td>普通单元格</td>
+			</tr>
+			<tr>
+				<td colspan="2">跨两行的单元格</td>
+				<td>普通单元格</td>
+			</tr>
+			<tr>
+				<td >跨两行的单元格</td>
+				<td>普通单元格</td>
+			</tr>
+		</table>
+		<!--<img src="image/IMG_1303.JPG" width="250" height="400" />-->
+		
+		
+		<table style = "width:400px" border="1">
+			<caption><b>疯狂朋涛体系图书</b></caption>
+			<thead>
+			<tr>
+				<th>书名</th>
+				<th>作者</th>
+			</tr>
+			</thead>
+			<tfoot>
+				<td colspan="2" style="text-align: right;">现总价：2本图书</td>
+			</tfoot>
+			<thboy>
+			<tr>
+				<td>人体艺术学</td>
+				<td>刘朋涛院士</td>
+			</tr>
+			<tr>
+				<td>两性艺术</td>
+				<td>刘朋涛</td>
+			</tr>
+			</thboy>
+			
+		</table>
+		
 	</body>
 </html>
