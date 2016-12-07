@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<!-- designModel 属性相当于一个全局的contentEditable属性，如果把整个页面
+			的designModel属性设置为on时，该页面上所有 可支持contentEditable属性元素都
+			可编辑 状态；designModel属性为off
+			在javaScript代码中只能修改整个HTML页面的designModel属性例如：使用如下 代码
+			可以打开HTML页面的designModel属性
+			document.designModel = "on"
+		-->
+	</head>
+	<body ondblclick="document.designMode='on'">
+		<div>designModel属性</div>
+	   <table style="width: 500px; border-collapse: collapse;"border="1">
+				<tr>
+					<td>疯狂java</td>
+					<td> 疯狂安卓</td>
+				</tr>
+				<tr>
+					<td>轻量java</td>
+					<td> 经典安卓</td>
+				</tr>
+	</body>
+</html>

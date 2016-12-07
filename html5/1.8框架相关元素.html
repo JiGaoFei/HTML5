@@ -2,9 +2,18 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>框架相关元素</title>
+		<title>内联框架元素</title>
+		<!--
+			HTML5不再推荐在页面中使用框架集，因此HTML5删除了<frameset></frameset>,
+			<frame>和<noframes></noframes>这三个标签
+				HTML5依然保留了一个与框架相关的元素：<iframe></iframe>元素，该元素可以
+				在普通 HTML页面中使用，该元素用于在普通 HTML页面中生成 一个内联 框架，可以直接 放在 
+				HTML页面的做生意位置 ，该元素队了可指定 id，style，class等核心属性之外 ，还可以 指定
+				src：该属性指定一个url，指定 该ifframe将装载哪个页面
+		-->
 	</head>
 	<body>
-		<img src="image/67.jpg" />
+		<iframe src="http://www.pp3.cn/uploads/201510/2015101713.jpg" width="300" height="400"></iframe>
+		主页面内容
 	</body>
 </html>

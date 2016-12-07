@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>contentEditable属性</title>
+		<!--HTML5为大部分元素都增加了contentEditable属性，如果将该属性设为true,那么
+			浏览器将会允许开发者直接 编辑 该HTML元素里内容 ，此处 的HTML元素并不是指那些
+			原本就允许用户输入的表单元元素，如文本框，文本域之类的，而是可以把table，div
+			等元素变成 可编辑状态
+			contentEditable属性具有“可继承性”的特点：如果一个HTML5元素的父元素是“可编辑的”
+			，那么它默认也是可编辑的，除非显示指定 contentEditable= “false”
+		-->
+	</head>
+	<body>
+		<!--直接指定contentEditable = "true" 表明该元素是可编辑的-->
+		<div contenteditable="true" style="width: 500px; border: 1px solid black">
+			我要上春晚
+			<!--该元素的父元素有contentEditable = "true" 因此 该表格也是可编辑的-->
+			<table style="width: 500px; border-collapse: collapse;"border="1">
+				<tr>
+					<td>疯狂java</td>
+					<td> 疯狂安卓</td>
+				</tr>
+				<tr>
+					<td>轻量java</td>
+					<td> 经典安卓</td>
+				</tr>
+				
+			</table>
+		</div>
+		<hr />
+		<!--这个表格是不可编辑的，双击后是可以编辑的-->
+		<!--HTML5为允许设置contentEditable属性的元素提供了iscontentEditable属性
+			当该元素牌可编辑状态时，该属性返回true，否则返回false
+			开发者可以通过该元素的innerHTML属性来获取编辑内容
+		-->
+		<table id="target" ondblclick="this.contentEditable =true"style="width: 500px; border-collapse: collapse;"border="1">
+			<tr>
+					<td>php</td>
+					<td> c</td>
+				</tr>
+				<tr>
+					<td>oc</td>
+					<td> javascript</td>
+					
+			
+		</table> 
+		 
+	</body>
+</html>
