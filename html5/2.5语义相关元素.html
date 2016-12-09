@@ -3,7 +3,37 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>语义相关元素</title>
+		<!--HTML 5提供了如下两个语义相关元素
+			<mark> 用于显示HTML页面中需要重点关注的内容,就像我们看书时喜欢
+			用荧光笔把某些重点内容标注出来一样,该元素可以指定id,style,class和hidden
+			等通用属性,浏览器常会用黄色显示此标内容 
+			</mark>
+			<time> 用来显示被标注内容 是日期,时间或者日期时间,使用该元素时除了可以
+			指定id,style,class和hiddern通用属性之外 ,还可指定如下 属性
+			datetime:该属性主要 用于向机器提供 时间 (向浏览者呈现的时间放在 <time>和</time>)
+			</time>之间datetime属性的属性值应该是符合yyyy-MM--ddTHH:mm格式 的日期
+			,当然也可以只指定日期,或只指定时间
+			
+			
+			提示:如果 <time>元素所包含的内容 本身 就满足标准的日期,时间 格式 ,那么使
+			用</time>时可以不指定datetime属性,否则就应该指定datetime属性
+		-->
+		
 	</head>
 	<body>
+		<article>
+			<header>
+				<h2>疯狂软件即将引入<mark>HTML 5</mark>相关课程</h2>
+			</header>
+			<p>
+				<mark>HTML 5</mark>是下一代HTML5的规范,<br />
+				<mark>HTML 5</mark>即将把前端开发者从繁重 的开发中解放出来<br />
+				为了把握技术的潮流,疯狂软件教育计划在
+				<time datetime="2012-04-01">2012年4月</time>
+				引入<mark>HTML5</mark> 相关课程<br />
+				疯狂软件教育的上课时间 是<time datetime="09:00">早上9点</time>
+				到<time datetime="17:30">下午5点半</time><br />
+			</p>
+		</article>
 	</body>
 </html>
