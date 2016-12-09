@@ -18,7 +18,19 @@
 			提示:如果 <time>元素所包含的内容 本身 就满足标准的日期,时间 格式 ,那么使
 			用</time>时可以不指定datetime属性,否则就应该指定datetime属性
 		-->
-		
+		<!--
+			<mark> 元素非常 适合用于"高亮显示 "全文检索 时的关键字,而这些 
+			关键字也是检索者需要重点关注的
+			</mark>
+			
+			<detail> 元素用于显示一段 详细 信息或某个主题 的细节.该元素通常会与
+			summary元素结合使用,当把summary放在 detail元素内部时,summary元素
+			用于为details定义摘要信息,摘要信息默认是可见的,当用户点击摘要信息时,浏览器
+			会显示出detail里的详细内容
+			
+			目前只有chrom浏览器支持这两个 元素
+			</detail>  
+		-->
 	</head>
 	<body>
 		<article>
@@ -34,6 +46,10 @@
 				疯狂软件教育的上课时间 是<time datetime="09:00">早上9点</time>
 				到<time datetime="17:30">下午5点半</time><br />
 			</p>
+			<details>
+				<summary>芙蓉镇</summary>
+				芙蓉镇是一部极好的电影,每个中国人都不应该错过.
+			</details>
 		</article>
 	</body>
 </html>
