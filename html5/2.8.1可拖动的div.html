@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>可拖动的div</title>
+		<!--对于普通元素而言,如果希望把它变成可拖动的,开发者只要把元素的draggable属性
+			设为true即可,但仅仅设置该元素的dragable属性还不够,因为 仅仅设置了draggable
+			="true"只表示该元素可拖动,但拖动时并未携带数据,因此 用户看不到拖动效果
+			为了让拖动操作能携带数据,应该为被 拖动的ondragstart事件指定监听器,在该监听器
+			中让拖动操作可以携带数据
+		-->
+		<!--doucument对象默认阻止了拖动事件,而其他HTML组件也是位于document对象内的.因此
+			它们也不能接受"放"
+			为了让document可以接受"放",应该为document的ondragover事件指定监听器,在监听器
+			中取消document对拖动事件的默认行为.
+		-->
+	</head>
+	<body>
+		<div id="source" style="width: 80px ;height: 80px;
+			border: 1px solid black;
+			background-color: #bbb; "
+			draggable="true" >今天是12月10号</div>
+			<script>
+				var source = document.getElementById("source");
+				source.ondragstart = function(evt)
+				{
+					// 让拖动操作携带数据
+					evt.dataTransfer.setData("text/plain","www.jd.com");
+					
+				}
+				
+				document.ondragover = function(event1)
+				{
+				
+					// 取消事件的默认行为
+					return false;
+				}
+				document.ondrop = function(even2)
+				{
+					source.style.position = "absolute";
+					source.style.left = even2.pageX + "px";
+					source.style.top = even2.pageY +"px";
+					// 取消事件的默认行为
+					return false;
+				}
+			</script>
+	</body>
+</html>
