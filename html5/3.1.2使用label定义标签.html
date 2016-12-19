@@ -3,6 +3,21 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>使用label定义标签</title>
+		<!--
+			<label>元素用于在表单元素中定义标签,这些标签可以对其它可生成 请求参数的
+			表单控件元素(单行文本框,密码框)进行说明,</label>元素不需要生成 请求参数,因此
+			不要为 <label>元素指定value属性值
+			label元素可以指定id,style,class等核心属性,也可以指定onclick等事件属性,除此之外 
+			,还可以指定一个for属性,该属性指定该标签 与哪个 表单控件关联.
+			
+			
+			隐式使用for属性:指定label元素的for属性值所关联表单控件的id属性值.
+			显式关联:将普通文本,表单控件 一起放在 label元素内部即可
+			
+			注意:尽量少用显式的方式,这种方式在笔者的Internet Explore浏览器中没有很好的支持
+			,当用户单击元素对应的标签时,所关联的表单空间并不会获得输入点
+			
+		-->
 	</head>
 	<body>
 		<form action="http://www.baidu.com" method="get">
