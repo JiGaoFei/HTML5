@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>设置阴影</title>
+	</head>
+	
+	<body>
+		<h2>启用阴影</h2>
+		<canvas id="mc" width="600" height="200" style="border: 1px solid green;"></canvas>
+	<script type="text/javascript">
+		// 获取canvas元素对应的DOM对象
+		var canvas = document.getElementById('mc');
+		// 获取在canvas上绘图的CanvasRenderingContext2D
+		var ctx = canvas.getContext('2d');
+		// 设置阴影模糊度
+		ctx.shadowBlur =5.6;
+		// 设置阴影颜色
+		ctx.shadowColor = "#222";
+		// 设置阴影在 x,y方向的偏移
+		ctx.shadowOffsetX = 10;
+		ctx.shadowOffsetY = -6;
+		ctx.fillStyle = '#00f;'
+		ctx.textBaseline = 'top';
+		// 设置填充字符串
+		ctx.fillText('郑州',0,0);
+		ctx.strokeStyle = '#f0f';
+		// 绘制字符串边框
+		ctx.strokeText('中华人民共和国',0,50);
+		// 填充一个矩形区域
+		ctx.fillRect(20,150,180,80);
+		ctx.lineWidth = 8;
+		// 绘制一个矩形边框
+		ctx.strokeRect(300,150,180,80);
+	</script>
+	</body>
+</html>

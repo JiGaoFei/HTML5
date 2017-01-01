@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>绘制字符串</title>
+	</head>
+	<body>
+		<h2>绘制文字</h2>
+		<canvas id="mc" width="600" height="280"
+			style="border: 1px solid red;"></canvas>
+			<script type="text/javascript">
+				// 获取canvas元素对应的DOM对象
+				var canvas  = document.getElementById('mc');
+				// 获取在canvas上绘图的canvasRenderingContex2D对象
+				var ctx = canvas.getContext('2d');
+				ctx.fillStyle = '#00f';
+				ctx.textBaseline='top';
+				//填充字符串
+				ctx.fillText('中华人民共和国',0,0);
+				ctx.strokeStyle ='#f0f';
+				//绘制字符串的边框
+				ctx.strokeText('安静',0,50);
+			</script>
+	</body>
+</html>
