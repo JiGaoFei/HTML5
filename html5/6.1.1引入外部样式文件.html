@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html"  charset="UTF-8">
+		<title>链接 外部css样式单</title>
+		
+		
+		<!--HTML文档中使用 link元素来引入外部样式 文件,引入 外部样式 文件应在<head></head>
+			元素增加如下 link子元素
+			<link type = "text/css" rel = "stylesheet" href = "css样式文件的url">
+				
+				在上面的语法 格式 中,type和rel表明该页面使用了css样式单,对于引入css样式单情形
+				,这两个 属性的值无须改变.href属性的值则指向 css样式单文件的地址,此处的地址既可是
+				相对地址,也可以是互联网上的绝对地址.
+		-->
+		
+		
+		
+		
+		
+		<!--引入outer.css样式单文件-->
+		<link href="outer.css" rel="stylesheet" type="text/css" />
+		
+		<style type="text/css">
+			/*设置整个表格的背景色*/
+			table {
+				background-color: #003366;
+				width: 400px;
+			}
+			/*设置单元格的背景色,字体等*/
+			td {
+				background-color: #fff;
+				font-family: "楷体";
+				font-size: 20pt;
+				text-shadow: -8px 6px 2px #333;
+			}
+		</style>
+		
+		<!--正如在上面css样式单文件中见到的,css样式单中总是由一个或多个样式定义组成,
+			每个样式通常有如下语法格式:
+			Selector { property:value}
+			其中Selector 是应用样式的选择器,Selector决定对哪些HTML元素起作用.而花括号
+			里的属性名,属性值则指定字体,大小,背景,颜色等,也就是决定对HTML元素起怎样的作用
+			.
+		-->
+		
+		
+	</head>
+	<body>
+		<table>
+			<tr>
+				<td>疯狂java讲义</td>
+			</tr>
+			<tr>
+				<td>轻量级java讲义</td>
+			</tr>
+			<tr>
+				<td>疯狂ajax讲义</td>
+			</tr>
+		</table>
+	</body>
+</html>
