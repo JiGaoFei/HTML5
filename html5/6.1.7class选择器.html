@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>class选择器</title>
+		<style type="text/css">
+			/*对所有class为myclass的元素都起作用的css样式*/
+			.myclass{
+				width: 240px;
+				height: 40px
+				background-color:#dddddd;
+			}
+			/*对class为myclass的div元素起作用的css样式*/
+			div.myclass{
+				border: 2px solid black;
+				background-color: #888888;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="myclass">class属性为myclass的div元素</div>
+		<p class="myclass">class属性为myclass的p元素</p>
+	</body>
+</html>
