@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>包含选择器</title>
+		<!--包含选择器用于指定目标选择器必须处于某个选择器对应的元素内部,其语法格式如下
+			:
+			Selector1 Selector2 {...}
+			其中Selector1, Selector2都是有效的选择器
+		-->
+		
+		
+		
+		
+		
+		
+		<style type="text/css">
+			/*对所有的div元素起作用的css样式*/
+			div{
+				width: 350px;
+				height: 60px;
+				background-color: #ddd;
+				margin: 5px;
+			}
+			/*对div之内且class属性为a的元素起作用的css样式*/
+			div.a{
+				width: 200px;
+				height: 35px;
+				border: 2px dotted black;
+				background-color: #888;
+			}
+		</style>
+	</head>
+	<body>
+		<div>没有任何属性的div元素</div>
+		<div><section><div class="a">处于div之内且class属性为a的元素</div></section></div>
+		<p class="a">没有处于div之内,但class属性为a的元素</p>
+	</body>
+</html>
