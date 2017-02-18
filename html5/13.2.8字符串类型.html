@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>字符串类型</title>
+	</head>
+	<body>
+		
+	</body>
+	<script>
+	//javascript的字符串必须用引号括起来,此处的引号可以是单引号,也可以是双引号,
+		a = "Hello JavaScript";
+		b = 'Hello JavaScript';
+		//javascript中没有字符类型,或者说字符类型和字符串类型是完全相同的即使
+		var a = 'a';
+		// 这种代码定义的a仍然是字符串类型的变量,没有字符类型变量
+		
+		
+		// 定义字符串变量a
+		var a  = 'abc中国'
+		// 获取a的长度
+		var b = a.length;
+		// 将一系列Unicode值转换成字符串
+		var c = String.fromCharCode(97,98,99);
+		// 输出a的长度,以及字符串a在索引4处的字符和
+		// 相应的Unicode值,以及c字符串变量的值
+		alert(b+"----"+a.charAt(4)+"----"+a.charCodeAt(4)+"----"+c);
+	</script>
+</html>

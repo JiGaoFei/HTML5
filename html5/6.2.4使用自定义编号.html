@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>自定义编号</title>
+		<style type="text/css">
+			/*为div的子元素定义了一个计数器:mycounter*/
+			div>div{
+				counter-increment: mycounter;
+			}
+			/*在div的子div元素前端插入自定义风格的mycounter计数器*/
+			div>div:before{
+				content: '第' counter(mycounter,lower-greek) '本.';
+				font-size: 20pt;
+				font-weight: bold;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+		<div>疯狂java</div>
+		<div>疯狂ios</div>
+		<div>疯狂html5</div>
+		</div>
+	</body>
+</html>
